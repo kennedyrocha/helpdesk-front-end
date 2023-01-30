@@ -1,0 +1,9 @@
+{
+    "editor.tabSize": 4,
+    "problems.defaultViewMode": "tree",
+"workbench.tree.indent": 30,
+"editor.detectIndentation": false,
+"explorer.confirmDragAndDrop": false,
+"explorer.enableDragAndDrop": false,
+"notebook.dragAndDropEnabled": false
+}
