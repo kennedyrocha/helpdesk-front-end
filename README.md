@@ -1,6 +1,7 @@
 <h1 align="center"> Help Desk - Front End<h1>
   
-![screen-capture](https://user-images.githubusercontent.com/40395983/216141149-c8958130-58b3-4bf3-affc-0fb76ea7b29f.gif)
+[screen-capture.webm](https://user-images.githubusercontent.com/40395983/216141541-5261fe4f-06d3-4fb6-bcfe-27501d607181.webm)
+
 
 # Descrição
   Projeto front-end em Angular versão 15.1.3.
@@ -19,6 +20,6 @@
   Usuário: valdir@mail.com
   Senha: 123
   
-## Servidor de desenvolvimento
+# Servidor de desenvolvimento
 
 Execute `ng serve` para rodar em desenvolvimento. Navegue até `http://localhost:4200/`. A Aplicação será carregada automaticamente caso qualquer alteração em arquivos seja feita.
