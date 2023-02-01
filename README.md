@@ -1,9 +1,9 @@
 <h1 align="center"> Help Desk - Front End<h1>
   
-[screen-capture.webm](https://user-images.githubusercontent.com/40395983/216137933-b5fecca9-0878-44fd-86fd-79b7b963740e.webm)
+![screen-capture](https://user-images.githubusercontent.com/40395983/216141149-c8958130-58b3-4bf3-affc-0fb76ea7b29f.gif)
 
-
-Projeto front-end em Angular versão 15.1.3.
+# Descrição
+  Projeto front-end em Angular versão 15.1.3.
   O projeto é uma aplicação de registro de chamados, onde há o CRUD completo de clientes, técnicos, e chamado.
  
   
