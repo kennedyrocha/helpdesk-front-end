@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Chamado } from 'src/app/models/chamado';
 import { Cliente } from 'src/app/models/cliente';
@@ -26,23 +26,31 @@ export class ChamadoUpdateComponent {
         nomeCliente:    '',
         nomeTecnico:    ''
     }
-
     constructor(
         private clienteService: ClienteService,
         private tecnicoService: TecnicoService,
         private chamadoService: ChamadoService,
         private toastService: ToastrService,
-        private routerService: Router
+        private routerService: Router,
+        private activatedRoute: ActivatedRoute
     ) { }
 
     ngOnInit(): void {
+        this.chamado.id = this.activatedRoute.snapshot.paramMap.get('id');
+        this.findById(this.chamado.id);
         this.findAllClientes();
         this.findAllTecnicos();
     }
 
-    create(): void {
+    findById(id: any): void {
+        this.chamadoService.findById(id).subscribe(resposta => {
+            this.chamado = resposta;
+        })
+    }
+
+    update(): void {
         this.chamadoService.create(this.chamado).subscribe(resposta => {
-            this.toastService.success('Chamado criado com Sucesso!', 'Novo Chamado');
+            this.toastService.success('Chamado editado com Sucesso!', 'Novo Chamado');
             this.routerService.navigate(['chamados']);
         },
         ex => {
@@ -80,5 +88,45 @@ export class ChamadoUpdateComponent {
                 && this.observacoes.valid
                 && this.tecnico.valid
                 && this.cliente.valid;
+    }
+
+    retornaStatus(status: any): string {
+        switch (status) {
+            case 0 : {
+                return 'Aberto';
+                break; 
+            }
+            case 1 : {
+                return 'Andamento';
+                break; 
+            }
+            case 2 : {
+                return 'Encerrado';
+                break; 
+            }
+            default:  {
+                return '';
+            }
+        }
+    }
+
+    retornaPrioridade(prioridade: any): string {
+        switch (prioridade) {
+            case 0 : {
+                return 'Baixa';
+                break; 
+            }
+            case 1 : {
+                return 'Média';
+                break; 
+            }
+            case 2 : {
+                return 'Alta';
+                break; 
+            }
+            default:  {
+                return '';
+            }
+        }
     }
 }
