@@ -1,1 +1,55 @@
-<p>chamado-create works!</p>
+<div class="conteiner mat-elevation-z8">
+    <h1 class="full-width">Abertura de Chamado</h1>
+    <img src="assets/img/chamado-create.svg" alt="Chamado Image" class="full-width">
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Título do Chamado</mat-label>
+            <input matInput placeholder="Ex. Trocar bateria do Notebook">
+        </mat-form-field>
+    </form>
+    <div class="status-prioridade">
+        <mat-form-field appearance="outline">
+            <mat-label>Selecione um Status</mat-label>
+            <mat-select>
+                <mat-option value="0">Aberto</mat-option>
+                <mat-option value="1">Andamento</mat-option>
+                <mat-option value="2">Encerrado</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Selecione uma Prioridade</mat-label>
+            <mat-select>
+                <mat-option value="0">Baixa</mat-option>
+                <mat-option value="1">Média</mat-option>
+                <mat-option value="2">Alta</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="tecnico">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Selecione um Técnico</mat-label>
+            <mat-select>
+                <mat-option value="0">Valdir</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="cliente">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Selecione um Cliente</mat-label>
+            <mat-select>
+                <mat-option value="0">Albert Einstein</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <form class="form" >
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Deixe uma Descrição</mat-label>
+          <textarea class="descricao" matInput placeholder="Ex. Trocar bateria de Notebook queimada"></textarea>
+        </mat-form-field>
+      </form>
+      <button class="full-width mat-elevation-z8" mat-raised-button color="primary">Criar</button>
+      <button class="full-width mat-elevation-z8" mat-stroked-button color="warn">Cancelar</button>
+
+      <p class="full-width">desenvolvido por Kennedy Oliveira</p>
+</div>
